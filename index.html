@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatZ by Aman</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="app-container">
+    <div class="chat-container">
+      <div class="chat-header">
+        <div class="logo-container">
+          <div class="logo">
+            <i class="fas fa-comments"></i>
+            <span class="logo-text">ChatZ</span>
+          </div>
+          <div class="logo-subtitle">by Aman</div>
+        </div>
+        
+        <div class="room-setup" id="roomSetup">
+          <div class="setup-card">
+            <h2>Welcome to ChatZ</h2>
+            <p>Connect with friends in secure, encrypted rooms</p>
+            
+            <div class="form-group">
+              <label for="usernameInput">
+                <i class="fas fa-user"></i>
+                Username
+              </label>
+              <input type="text" id="usernameInput" placeholder="Enter your username" maxlength="20">
+            </div>
+            
+            <div class="room-actions">
+              <div class="join-section">
+                <h3>Join Existing Room</h3>
+                <div class="room-input-group">
+                  <div class="form-group">
+                    <label for="roomCodeInput">
+                      <i class="fas fa-key"></i>
+                      Room Code
+                    </label>
+                    <input type="text" id="roomCodeInput" placeholder="Enter room code" maxlength="10">
+                  </div>
+                  <button id="joinRoomBtn" class="btn-primary">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Join Room
+                  </button>
+                </div>
+              </div>
+              
+              <div class="divider">
+                <span>OR</span>
+              </div>
+              
+              <div class="create-section">
+                <h3>Create New Room</h3>
+                <button id="createRoomBtn" class="btn-secondary">
+                  <i class="fas fa-plus"></i>
+                  Create New Room
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-area" id="chatArea" style="display: none;">
+        <div class="room-info">
+          <div class="room-details">
+            <span id="roomCodeDisplay" class="room-code"></span>
+            <span id="roomTimer" class="room-timer"></span>
+          </div>
+          <div class="room-actions-bar">
+            <div class="encryption-badge">
+              <i class="fas fa-lock"></i>
+              <span>End-to-End Encrypted</span>
+            </div>
+            <button id="leaveRoomBtn" class="btn-leave">
+              <i class="fas fa-sign-out-alt"></i>
+              Leave Room
+            </button>
+          </div>
+        </div>
+        
+        <div class="messages-container" id="messagesContainer">
+          <!-- Messages will appear here -->
+        </div>
+
+        <div class="input-area">
+          <div class="input-wrapper">
+            <input type="text" id="messageInput" placeholder="Type your message..." maxlength="500">
+            <button id="sendBtn" class="btn-send">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="app-footer">
+      <p>&copy; 2025 ChatZ by Aman. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
